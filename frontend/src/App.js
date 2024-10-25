@@ -11,6 +11,8 @@ import SettingsPage from './pages/SettingsPage';
 import SalesPage from './pages/SalesPage';
 import AdminSetting from './pages/AdminSetting';
 import SalesReport from './pages/SalesReport'
+import ProfilePage from './pages/AdminProfilePage';
+import UserProfilePage from './pages/UserProfilePage';
 
 const App = () => {
     return (
@@ -27,6 +29,9 @@ const App = () => {
                     <Route path="/sales" element={<SalesPage />} />
                     <Route path="/admin-settings" element={<AdminSetting />} />
                     <Route path="/sales-report" element={<SalesReport />} />
+                    <Route path="/profile" element={<ProfilePage />} />
+                    <Route path="/user-profile" element={<UserProfilePage />} />
+
                 </Routes>
             </Router>
         </ThemeProvider>

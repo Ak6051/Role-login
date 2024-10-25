@@ -10,6 +10,7 @@ export const createSale = async (saleData) => {
     return axios.post(API_URL, saleData);
 };
 
+
 export const updateSale = async (id, saleData) => {
     return axios.put(`${API_URL}/${id}`, saleData);
 };

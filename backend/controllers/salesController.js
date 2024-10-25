@@ -4,6 +4,7 @@ const  Sale = require ('../models/Sale.js');
 exports.createSale = async (req, res) => {
   try {
     const {
+      LeadBy,
       companyName,
       phoneNumber,
       address,
@@ -18,6 +19,7 @@ exports.createSale = async (req, res) => {
     } = req.body;
 
     const sale = new Sale({
+      LeadBy,
       companyName,
       phoneNumber,
       address,

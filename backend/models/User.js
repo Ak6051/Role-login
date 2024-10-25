@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
@@ -7,6 +8,9 @@ const UserSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     mobileNo: { type: String, required: true },
+    address: { type: String, required: true }, // New field for address
+    gender: { type: String, enum: ['Male', 'Female', 'Other'], required: true },
+    designation: { type: String, enum: ['HR Recruiter', 'HR Executive', 'Accountant', 'Sales Executive', 'Business Development Manager', 'Team Leader', 'Owner'] }, // Add this field
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     createdAt: { type: Date, default: Date.now }
 });

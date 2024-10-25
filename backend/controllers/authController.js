@@ -4,7 +4,7 @@ const User = require('../models/User');
 
 // Register User
 const registerUser = async (req, res) => {
-    const { firstName, lastName, email, password, mobileNo } = req.body;
+    const { firstName, lastName, email, password, mobileNo, designation, address, gender } = req.body;
 
     try {
         // Check if the user already exists
@@ -13,13 +13,16 @@ const registerUser = async (req, res) => {
             return res.status(400).json({ msg: 'User already exists' });
         }
 
-        // Create a new user with role 'user'
+        // Create a new user with role 'user' and add designation, address, and gender
         user = new User({
             firstName,
             lastName,
             email,
             password,
             mobileNo,
+            designation,
+            address, // Add address here
+            gender, // Add gender here
             role: 'user' // Force role to 'user'
         });
 
@@ -30,6 +33,7 @@ const registerUser = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
+
 
 // Login User
 const loginUser = async (req, res) => {

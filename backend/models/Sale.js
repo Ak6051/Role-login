@@ -2,6 +2,7 @@
 const mongoose = require( 'mongoose');
 
 const saleSchema = new mongoose.Schema({
+  LeadBy: { type: String, required: true },
   companyName: { type: String, required: true },
   phoneNumber: { type: String, required: true },
   address: { type: String, required: true },
@@ -14,7 +15,7 @@ const saleSchema = new mongoose.Schema({
   designation: { type: String, required: true },
   description: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
-});
+})
 
 const Sale = mongoose.model('Sale', saleSchema);
 
