@@ -13,6 +13,7 @@ import AdminSetting from './pages/AdminSetting';
 import SalesReport from './pages/SalesReport'
 import ProfilePage from './pages/AdminProfilePage';
 import UserProfilePage from './pages/UserProfilePage';
+import HRform from './pages/HRForm'
 
 const App = () => {
     return (
@@ -31,6 +32,7 @@ const App = () => {
                     <Route path="/sales-report" element={<SalesReport />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/user-profile" element={<UserProfilePage />} />
+                    <Route path="/hr" element={<HRform/>} />
 
                 </Routes>
             </Router>

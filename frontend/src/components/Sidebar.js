@@ -84,6 +84,7 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 import BusinessIcon from '@mui/icons-material/Business';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -170,6 +171,14 @@ const Sidebar = () => {
                 <BusinessIcon />
               </ListItemIcon>
               <ListItemText primary="Sales" />
+            </ListItem>
+          </List>
+          <List component="div" disablePadding>
+            <ListItem button sx={{ pl: 4 }} onClick={() => navigate('/hr')}>
+              <ListItemIcon>
+                <PersonAddAlt1Icon />
+              </ListItemIcon>
+              <ListItemText primary="HR Form" />
             </ListItem>
           </List>
         </Collapse>

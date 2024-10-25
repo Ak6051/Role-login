@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
-    getAllSales,
-    createSale,
-    updateSale,
-    deleteSale
+  getAllSales,
+  createSale,
+  updateSale,
+  deleteSale,
 } = require('../controllers/sale.report.controller');
 
 router.get('/', getAllSales);
